@@ -1,5 +1,5 @@
-<x-bheader/>
-<body class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+@include('headerfile')
+
 
 <div class="container">
     <div class="row justify-content-center">
@@ -46,5 +46,4 @@
         </div>
     </div>
 </div>
-
-<x-bfooter/>
+@include('footerfile')

@@ -1,13 +1,11 @@
-<x-bheader/>
-<body>
+                <x-bheader/>
+            
+                <div class="navbar d-flex align-items-center justify-content-between px-4">
+                      <h2 id="tag" class="m-0">
+                User Successfully Logged In 
+                </h2>
+                <div class="dropdown">
 
-    <div class="navbar d-flex align-items-center justify-content-between px-4">
-
-        <h2 id="tag" class="m-0">
-            User Successfully Logged In {{ $data->email }}
-        </h2>
-
-        <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" 
                     id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle"></i> Account
@@ -40,10 +38,11 @@
         </div>
 
     </div>
-
     <br>
     <div class="main">
     <h1>Welcome , {{ $data->email }}</h1>
     <p>Hello Make Changes in Profile Section Above</p>
     </div>
+   
+
 <x-bfooter/>

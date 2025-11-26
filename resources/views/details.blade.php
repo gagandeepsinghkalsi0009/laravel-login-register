@@ -1,5 +1,7 @@
-<x-bheader/>
-
+@extends('headerfile')
+@section('heading')
+Enter Details
+@endsection
     <title>Registration Form</title>
   </head>
   <body class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
@@ -40,4 +42,4 @@
       </div>
     </div>
 
-   <x-bfooter/>
+   @include('footerfile')

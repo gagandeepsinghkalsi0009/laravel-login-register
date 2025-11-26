@@ -1,6 +1,8 @@
-<x-bheader/>
+@extends('headerfile')
+@section('heading')
+SignUp
+@endsection
 <br><br><br>
-
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-12 p-4 p-md-5 border rounded-3 bg-white shadow-sm">
@@ -40,4 +42,4 @@
       </div>
     </div>
 
-    <x-bfooter/>
+    @include('footerfile')

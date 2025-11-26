@@ -1,4 +1,4 @@
-<x-bheader/>
+@include('headerfile')
 <br><br><br><br>
 <div class="container">
     <div class="row justify-content-center">
@@ -29,4 +29,4 @@
     </div>
 </div>
 
-<x-bfooter/>
+@include('footerfile')
