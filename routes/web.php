@@ -22,8 +22,7 @@ Route::get('/updatedashboard/{id}',[UserController::class,'updatepage'])->name('
 Route::post('updateuser/{id}',[UserController::class,'updateuser'])->name('update.user');
 Route::get('resetpassword/{id}',[UserController::class,'reset'])->name('reset.pass');
 Route::post('changepass/{id}',[UserController::class,'changepass'])->name('change.pass');
-Route::get();
-                        
+      
 
 
 
