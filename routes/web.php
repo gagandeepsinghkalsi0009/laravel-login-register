@@ -18,12 +18,10 @@ Route::any('/editadmin/{id}',[UserController::class,'editadmin'])->name('edit.ad
 Route::post('updateadmin/{id}',[UserController::class,'updateadmin'])->name('update.admin');
 Route::get('/updatedashboard/{id}',[UserController::class,'updatepage'])->name('updatepage.user');
 
-// User 
+// User Routes
 Route::post('updateuser/{id}',[UserController::class,'updateuser'])->name('update.user');
 Route::get('resetpassword/{id}',[UserController::class,'reset'])->name('reset.pass');
 Route::post('changepass/{id}',[UserController::class,'changepass'])->name('change.pass');
-
-                        
 
 
 
