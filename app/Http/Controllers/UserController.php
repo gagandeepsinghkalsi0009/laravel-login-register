@@ -126,10 +126,11 @@ class UserController extends Controller
         return redirect()->route('signin');
     }
 
-    // fetch data from users and sent to admindashboard
-     function getdata(){
-    $user = User::get();
-    return view('admindash',['users'=>$user]);
+    // fetch data from users and sent login information to admindashboard
+    function getdata(){
+    $login = Auth::user();
+    $users = User::get();
+    return view('admindash',compact('users','login'));
 
 }
     
