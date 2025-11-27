@@ -16,7 +16,7 @@ class MailController extends Controller
            return redirect()->back()->with('Mail has been sent successfully');
         }
         else{
-            echo "mail has not been sent successfully";
+            echo "mail has not been sent an error occured";
         }
     }
 }
