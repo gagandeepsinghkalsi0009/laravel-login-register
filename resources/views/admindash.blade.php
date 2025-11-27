@@ -1,4 +1,21 @@
 <x-header/>
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <button class="btn btn-outline-light me-2 d-lg-none" id="toggleBtn">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <a class="navbar-brand" href="#">AdminPanel</a>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link"><i class="bi bi-person-circle"></i> Admin {{$login->email}} </a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <!-- Content -->
   <div class="content">
 
@@ -20,6 +37,7 @@
             <th>Update User</th>
           </tr>
         </thead>
+        
         <tbody>
           @forelse($users as $user)
           <tr>
