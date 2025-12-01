@@ -5,6 +5,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\AdminController;
+
 
 Route::any('/signup', [UserController::class, 'signup'])->name('signup');
 Route::any('/submit', [UserController::class, 'details'])->name('submit');
@@ -23,7 +25,8 @@ Route::post('updateuser/{id}',[UserController::class,'updateuser'])->name('updat
 Route::get('resetpassword/{id}',[UserController::class,'reset'])->name('reset.pass');
 Route::post('changepass/{id}',[UserController::class,'changepass'])->name('change.pass');
 
-
+// Admin Pages Routes 
+Route::any('/addpage',[AdminController::class,'addpage'])->name('add.page');
 
 
 

@@ -78,6 +78,7 @@
     <a href="{{ route('admin.dash') }}" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a>
     
     <a href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    <a href="{{route('add.page')}}"><i class="bi bi-box-arrow-right"></i>Add Pages</a>
   </div>
 
    
