@@ -23,13 +23,14 @@ class AdminController extends Controller
             'status'=>$request->status,
         ]);
 
-        if($add){
-            return "details added"; 
-        }
+       
     }
    
     }
 
     // display pages made by admin dashboard
-    
+    function displaypage(){
+        $page = AdminPage::get();
+        return view('showpageadmin',compact('page'));
+    }
 }

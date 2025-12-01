@@ -6,6 +6,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AdminController;
+use App\Models\AdminPage;
 
 
 Route::any('/signup', [UserController::class, 'signup'])->name('signup');
@@ -25,9 +26,15 @@ Route::post('updateuser/{id}',[UserController::class,'updateuser'])->name('updat
 Route::get('resetpassword/{id}',[UserController::class,'reset'])->name('reset.pass');
 Route::post('changepass/{id}',[UserController::class,'changepass'])->name('change.pass');
 
-// Admin Pages Routes 
+// Admin Pages Routes                                  
 Route::any('/addpage',[AdminController::class,'addpage'])->name('add.page');
-
+Route::get('/displaypage',[AdminController::class,'displaypage'])->name('display.page');
+Route::get('/{url_key}',function($url_key){
+    $page = AdminPage::where('url_key',$url_key)
+                        ->where('status',1)
+                        ->first();
+                    return view('cmspage',compact('page'));
+});
 
 
 

@@ -7,7 +7,7 @@ Add Page Admin
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-12 p-4 p-md-5 border rounded-3 bg-white shadow-sm">
           
-          <h2 class="text-center mb-4">Sign Up</h2>
+          <h2 class="text-center mb-4">Add Page</h2>
           
           <form action ="{{route('add.page')}}" method="post">
             @csrf

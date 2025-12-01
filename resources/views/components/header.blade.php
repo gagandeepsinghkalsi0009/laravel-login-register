@@ -76,9 +76,8 @@
   <div class="sidebar" id="sidebar">
     <h5 class="px-3 mb-3">Menu</h5>
     <a href="{{ route('admin.dash') }}" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a>
-    
     <a href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a>
-    <a href="{{route('add.page')}}"><i class="bi bi-box-arrow-right"></i>Add Pages</a>
+    <a href="{{route('display.page')}}"><i class="bi bi-box-arrow-right"></i>All Pages</a>
   </div>
 
    
