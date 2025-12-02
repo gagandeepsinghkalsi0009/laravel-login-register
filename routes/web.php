@@ -36,13 +36,6 @@ Route::get('/{url_key}',function($url_key){
                     return view('cmspage',compact('page'));
 });
 
-
-
-
-
-
-
-// Route::resource('data',DataController::class)->names([
-//     'create'=>'data.build',
-// ]); 
-// Route::resource('data.comment',CommentController::class)->shallow();
+Route::get('/deletepage/{id}',[AdminController::class,'deletepage'])->name('delete.page');
+Route::get('/editpage/{id}',[AdminController::class,'editpage'])->name('edit.page');
+Route::post('updateadmin/{id}',[AdminController::class,'updateadmin'])->name('update.admin');

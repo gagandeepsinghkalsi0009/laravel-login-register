@@ -1,50 +1,35 @@
-@extends('headerfile')
-
-@section('heading')
-View Pages
-@endsection
-
-<br><br><br>
-<div class="table" class ="col-3"> 
-<table class="table" id = "admintable">
+<x-header/>
+<br><br>
+<a href="{{ route('add.page') }}" class="btn btn-primary" id="ab">Create Page</a>
+<div class="container mt-2">
+<table id="mytable" class="table table-striped table-bordered">
   <thead>
-  
     <tr>
-      <th scope="col">Page.No</th>
-      <th scope="col">Url Key</th>
-      <th scope="col">Meta Title</th>
-      <th scope="col">Meta Description</th>
-      <th scope="col">Content</th>
-      <th scope="col">Status</th>
-      <th scope="col">Created At</th>
-      <th scope="col">Updated At</th>
-      <th scope="col">View Page</th>
-      <th scope="col">Edit Page</th>
-      <th scope="col">Delete Page</th>
      
+      <th>Url Key</th>
+      <th>Status</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
-
   </thead>
+
   <tbody>
+    @forelse($page as $data)
     <tr>
-          @forelse($page as $data)
-      <td>{{$data->id}}</td>
-      <td>{{$data->url_key}}</td>
-      <td>{{$data->meta_title}}</td>
-      <td>{{$data->meta_description}}</td>
-      <td>{{$data->content}}</td>
-      <td>{{$data->status}}</td>
-      <td>{{$data->created_at}}</td>
-      <td>{{$data->updated_at}}</td>
-      <td><a href="">View</a></td>
-      <td><a href="">Edit</a></td>
-      <td><a href="">Delete</a></td>
+    
+      <td>{{ $data->url_key }}</td>
+      <td>{{ $data->status }}</td>
+      <td>{{ $data->created_at }}</td>
+      <td>{{ $data->updated_at }}</td>
+      <td><a href="{{ route('edit.page',$data->id) }}">Edit</a></td>
+      <td><a href="{{ route('delete.page',$data->id) }}">Delete</a></td>
     </tr>
     @empty
-    Data Not found
+      Data Not Found
     @endforelse
   </tbody>
 </table>
 </div>
-
-@extends('footerfile')
+<x-footer/>

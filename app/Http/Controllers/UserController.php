@@ -133,6 +133,7 @@ class UserController extends Controller
     return view('admindash',compact('users','login'));
 
 }
+
     
     // update details of user & redirect to edituser page
     function updatepage($id){

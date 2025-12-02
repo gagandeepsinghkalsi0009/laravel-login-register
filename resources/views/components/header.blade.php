@@ -21,8 +21,8 @@
       top: 56px;
       left: 0;
       height: calc(100vh - 56px);
-      width: 230px;
-      background-color: #343a40;
+      width: 150px;
+      background-color: black;
       color: white;
       overflow-y: auto;
       padding-top: 15px;
@@ -66,19 +66,58 @@
         margin-left: 0;
       }
     }
+
+      .footer-custom {
+            background-color: black;
+            color: white;
+            border-top: 1px solid black;
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    
+        #mytable{
+          width:900px;
+          margin-left:120px;
+        }
+        #ab{
+          margin-left:1200px;
+         background-color:blue;
+         color:white;
+         padding:1px;
+        }
   </style>
 </head>
 <body>
 
-  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <button class="btn btn-outline-light me-2 d-lg-none" id="toggleBtn">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <a class="navbar-brand" href="#">AdminPanel</a>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link"><i class="bi bi-person-circle"></i>Admin {{ $login->email ?? 'Guest' }}</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
-    <h5 class="px-3 mb-3">Menu</h5>
-    <a href="{{ route('admin.dash') }}" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a>
-    <a href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a>
-    <a href="{{route('display.page')}}"><i class="bi bi-box-arrow-right"></i>All Pages</a>
+    <a href="{{ route('admin.dash') }}" class="active">Users</a>
+    <a href="{{route('display.page')}}">All Pages</a>
   </div>
+
+
 
    
   
