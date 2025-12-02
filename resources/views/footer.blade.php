@@ -1,5 +1,5 @@
 
-<footer class="footer-custom d-flex align-items-center justify-content-between px-4"> <h2 class="m-0 fs-5">© 2025 All Rights Reserved</h2> <p class="m-0">Designed & Developed by Gagandeep</p> </footer>
+<footer class="footer-custom d-flex align-items-center justify-content-between px-4"> <h2 class="m-0 fs-5">© 2025 All Rights Reserved</h2> <p id="footerpara">Designed & Developed by Gagandeep</p> </footer>
 
 
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>

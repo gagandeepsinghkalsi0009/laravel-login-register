@@ -1,4 +1,4 @@
-<x-header/>
+@include('header')
 <br><br>
 <a href="{{ route('add.page') }}" class="btn btn-primary" id="ab">Create Page</a>
 <div class="container mt-2">
@@ -32,4 +32,4 @@
   </tbody>
 </table>
 </div>
-<x-footer/>
+@include('footer')

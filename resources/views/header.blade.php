@@ -67,17 +67,24 @@
       }
     }
 
-      .footer-custom {
-            background-color: black;
-            color: white;
-            border-top: 1px solid black;
-            height: 40px;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 1000;
-        }
+    .footer-custom {
+    background-color: black;
+    color: white;
+    border-top: 1px solid black;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    }
+
+    #footerpara{
+      margin-right:540px;
+      margin-top:10px;
+    }
+
+       
     
         #mytable{
           width:900px;
@@ -104,7 +111,7 @@
 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link"><i class="bi bi-person-circle"></i>Admin {{ $login->email ?? 'Guest' }}</a></li>
+          <li class="nav-item"><a class="nav-link"><i class="bi bi-person-circle"></i>{{ $detail->email ?? 'Admin' }}</a></li>
           <li class="nav-item"><a class="nav-link text-danger" href="{{ route('logout') }}"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
         </ul>
       </div>

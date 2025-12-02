@@ -48,6 +48,15 @@
         h2 {
             font-style: italic;
         }
+
+        #paraid{
+            margin-right:530px;
+            margin-top:15   px;
+        }
+
+        #resetbutton{
+            margin-left:350px;
+        }
     </style>
 </head>
 

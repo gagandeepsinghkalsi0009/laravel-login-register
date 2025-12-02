@@ -1,4 +1,4 @@
- <x-header/>
+ @include('header')
 <br><br><br>
 <div class="container">
       <div class="row justify-content-center">
@@ -51,5 +51,5 @@
         </div>
       </div>
     </div>
-<x-footer/>
+@include('footer')
 

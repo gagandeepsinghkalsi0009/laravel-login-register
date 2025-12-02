@@ -209,10 +209,24 @@ function editadmin($id){
 
     // User Password Change 
     function changepass(Request $request, $id){
-        User::where('id',$id)->update([
+        $request->validate([
+            'password'=>'required|min:4|max:15|confirmed|'
+        ],[
+            'password.min'=>'Password Must Be 4 characters Long',
+            'password.max'=>'Password Must Be 15 characters Long',
+        ]);
+
+       $pass = User::where('id',$id)->update([
             'password'=>Hash::make($request->password),
         ]);
-        return redirect()->back()->with('success','Password has been changed Successfully');
+        if($pass){
+       
+            return redirect()->back()->with('success','Password has been changed Successfully');
+        }
+
+        else{
+            return "Password Not Changed Try Again Letter";
+        }
     }
 }
 

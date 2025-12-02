@@ -40,7 +40,7 @@
                 @if(session('error'))
                 <x-alert type ="danger" message ="{{session('error')}}"/>
                 @endif
-
+                <a href="{{route('signin')}}" class="btn btn-primary" id="resetbutton">Back to LogIn</a>
             </form>
 
         </div>

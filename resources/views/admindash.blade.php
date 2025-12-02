@@ -1,4 +1,4 @@
-<x-header/>
+@include('header',['detail'=>$login])
 
   <!-- Content -->
   <div class="content">
@@ -42,4 +42,4 @@
 
 
   </div> <!-- end content -->
-  <x-footer/>
+ @include('footer')
