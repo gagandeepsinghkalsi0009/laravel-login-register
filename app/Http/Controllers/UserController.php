@@ -22,13 +22,13 @@ class UserController extends Controller
             {
 
                 $request->validate([
-                'email'=>'required|email|min:5|max:15',
-                'password'=>'required|min:4|max:8'
+                'email'=>'required|email|min:5|max:50',
+                'password'=>'required|min:4|max:15'
                 ],[
-                    'email.max'=>'Email Should be Maximum 15 Characteres Long',
+                    'email.max'=>'Email Should be Maximum 50 Characteres Long',
                     'email.min'=>'Email Should be Atleast 5 Characteres Long',
                     'password.min'=>'Password Should be Atleast 4 Characteres Long',
-                    'email.max'=>'Email Should be Atleast 8 Characteres Long',
+                    'email.max'=>'Email Should be Atleast 25 Characteres Long',
 
                 ]);
 
@@ -86,10 +86,10 @@ class UserController extends Controller
     if ($request->isMethod('post')) {
         
         $credentials = $request->validate([
-            'email' => 'required|email|min:5|max:15',
+            'email' => 'required|email|min:5|max:50',
             'password' => 'required|min:4|max:8',
         ],[
-             'email.max'=>'Email Should be Maximum 15 Characteres Long',
+             'email.max'=>'Email Should be Maximum 50 Characteres Long',
                     'email.min'=>'Email Should be Atleast 5 Characteres Long',
                     'password.min'=>'Password Should be Atleast 4 Characteres Long',
                     'email.max'=>'Email Should be Atleast 8 Characteres Long',
@@ -228,5 +228,7 @@ function editadmin($id){
             return "Password Not Changed Try Again Letter";
         }
     }
+   
+
 }
 

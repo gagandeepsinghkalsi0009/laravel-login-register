@@ -82,5 +82,6 @@ class AdminController extends Controller
             return "details not updated";
         }
     }
+
 }
 

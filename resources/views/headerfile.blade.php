@@ -55,7 +55,13 @@
         }
 
         #resetbutton{
-            margin-left:350px;
+            margin-left:175px;
+            text-decoration:none;
+        }
+
+        #resetbutton2{
+             margin-left:275px;
+            text-decoration:none;
         }
     </style>
 </head>
