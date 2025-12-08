@@ -40,7 +40,7 @@ class ResetPasswordController extends Controller
                 return redirect()->route('signin')->with('success', 'Password Reset Successful');
             }
             else{
-                return "Password not changed";
+                return redirect()->back('error',"Password not Reset An Error Occur in Between");
             }
         }
     }

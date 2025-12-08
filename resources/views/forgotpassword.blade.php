@@ -23,6 +23,15 @@ Forgot Password
                 Reset Password
             </button>
         </div>
+        @if(session('success'))
+        <div class="alert alert-primary" role="alert">
+        {{session('success')}}
+         @endif
+         @if(session('email'))
+         <div class="alert alert-primary" role="alert">
+         {{session('email')}}
+         @endif
+        </div>
     </form>
 </div>
 

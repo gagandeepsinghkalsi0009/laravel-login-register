@@ -7,6 +7,11 @@ use App\Models\Data;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SignInMail;
+use App\Mail\UserSignIn;
+use App\Mail\UserLogout;
+
 
 class UserController extends Controller
 {
@@ -102,11 +107,15 @@ class UserController extends Controller
 
             
             if ($user->user_type == 2) {
+                 $mail = Mail::to($user->email)->send(new SignInMail($user));
                 return redirect()->route('admin.dash');
+
             }
+
 
            
             if ($user->user_type == 1) {
+               Mail::to($user->email)->send(new UserSignIn($user));
                 return view('userdash',['data' =>$user]);
             }
 
@@ -122,6 +131,8 @@ class UserController extends Controller
 
     // User logout
     function logout(){
+        $user = Auth::user();
+        Mail::to($user->email)->send(new UserLogout($user));
         Auth::logout();
         return redirect()->route('signin');
     }

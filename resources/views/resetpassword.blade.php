@@ -33,6 +33,13 @@ Reset Passwowrd
                 Update Password
             </button>
         </div>
+        @if(session('success'))
+         <div class="alert alert-primary" role="alert">
+            {{session('success')}}
+            @endif
+            @if(session('error'))
+            <div class="alert alert-primary" role ="alert">
+            @endif
     </form>
 </div>
 @endsection
