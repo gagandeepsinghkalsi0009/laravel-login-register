@@ -73,6 +73,8 @@ class UserController extends Controller
                 'user_id' => $userid,
             ]);
 
+            
+
             if ($detail) {
                 return redirect()->route('signin');
             } else {
@@ -107,9 +109,8 @@ class UserController extends Controller
 
             
             if ($user->user_type == 2) {
-                 $mail = Mail::to($user->email)->send(new SignInMail($user));
-                return redirect()->route('admin.dash');
-
+            $mail = Mail::to($user->email)->send(new SignInMail($user));     
+            return redirect()->route('admin.dash');
             }
 
 

@@ -36,15 +36,10 @@ Route::post('changepass/{id}',[UserController::class,'changepass'])->name('chang
 // Admin Pages Routes                                  
 Route::any('/addpage',[AdminController::class,'addpage'])->name('add.page');
 Route::get('/displaypage',[AdminController::class,'displaypage'])->name('display.page');
-// Route::get('/{url_key}',function($url_key){
-//     $page = AdminPage::where('url_key',$url_key)
-//                         ->where('status',1)
-//                         ->first();
-//                     return view('cmspage',compact('page'));
-// });
 Route::get('/deletepage/{id}',[AdminController::class,'deletepage'])->name('delete.page');
 Route::get('/editpage/{id}',[AdminController::class,'editpage'])->name('edit.page');
 Route::post('updateadmin/{id}',[AdminController::class,'updateadmin'])->name('update.adminpage');
+Route::post('uploadimage',[AdminController::class,'uploadimage'])->name('upload.image');
 
 // ---------------------------------------------------------------------------------------------- //
 
@@ -53,3 +48,12 @@ Route::any('/forgotpassword',[ForgotPasswordController::class,'forgotpassword'])
 
 // Reset Password
 Route::any('/resetpassord/{token}',[ResetPasswordController::class,'resetpassword'])->name('password.reset');
+
+// ---------------------------------------------------------------------------------------------- //
+
+Route::get('/{url_key}',function($url_key){
+    $page = AdminPage::where('url_key',$url_key)
+                        ->where('status',1)
+                        ->first();
+                    return view('cmspage',compact('page'));
+});

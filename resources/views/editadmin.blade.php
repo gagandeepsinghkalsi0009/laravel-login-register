@@ -1,12 +1,11 @@
 @include('header')
-<br><br><br>
 <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8 col-12 p-4 p-md-5 border rounded-3 bg-white shadow-sm">
           
           <h2 class="text-center mb-4">Edit Admin Page</h2>
           
-          <form action ="{{route('update.admin',$editpage->id)}}" method="post">
+          <form action ="{{route('update.adminpage',$editpage->id)}}" method="post">
             @csrf
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Url Key</label>
@@ -24,14 +23,8 @@
               <input type="text" class="form-control" id="exampleInputPassword1" name="meta_description" value="{{$editpage->meta_description}}">
             </div>
 
-             <div class="mb-4">
-                            <label for="content" class="form-label fw-semibold">Page Content</label>
-                            <textarea class="form-control @error('content') is-invalid @enderror" 
-                                      id="content" 
-                                      name="content" 
-                                      rows="6" 
-                                      placeholder="Enter page content ">{{ old('content') }} value="{{$editpage->content}}" </textarea>
-                        </div>
+            <div id="editor"></div>
+            <input type="hidden" name="content" id="content">
 
             <div class="mb-3">
               <label for="userTypeSelect" class="form-label">Status</label>

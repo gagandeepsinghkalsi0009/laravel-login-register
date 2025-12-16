@@ -7,8 +7,10 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
+  
   <style>
     body {
       overflow-x: hidden;
@@ -96,6 +98,15 @@
          color:white;
          padding:1px;
         }
+
+        .imgs{
+              background-color: antiquewhite;
+              overflow: auto;
+              padding: 20px 10px 19px 23xp;
+              margin: 50px 50px 50px 50px;
+        }
+
+
   </style>
 </head>
 <body>

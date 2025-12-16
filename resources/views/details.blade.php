@@ -31,6 +31,10 @@ Enter Details
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="address">
               </div>
               
+              <div class="col-12">
+                <label for=""><strong>Upload Profile Image</strong></label>
+                <input type="file" name="file" >
+              </div>
               
               <div class="col-12 d-grid mt-3">
                 <button type="submit" class="btn btn-primary btn-lg">Add Details</button>

@@ -41,7 +41,7 @@ class AdminController extends Controller
     function editpage($id){
         $editpage = AdminPage::find($id);
         if($editpage){
-        return view('editadminpage',compact('editpage'));
+        return view('editadmin',compact('editpage'));
         }
         else{
             return "page not found";
@@ -82,6 +82,8 @@ class AdminController extends Controller
             return "details not updated";
         }
     }
+
+    
 
 }
 

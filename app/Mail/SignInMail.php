@@ -8,6 +8,8 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Attachment;
+use Illuminate\Mail\Mailables\Headers;
 
 class SignInMail extends Mailable
 {
@@ -36,8 +38,13 @@ class SignInMail extends Mailable
      */
     public function content(): Content
     {
+        $path = public_path('assets/images/expedite.png');
         return new Content(
             view: 'AdminMail',
+            with:([
+                'image' =>$path,
+            ]),
+            
         );
     }
 
@@ -48,6 +55,11 @@ class SignInMail extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return [
+            Attachment::fromPath(public_path('/assets/attachments/packingslip.pdf'))
+            ->as('incometax.pdf')
+            ->withMime('application/pdf')
+
+        ];
     }
 }
