@@ -23,10 +23,10 @@
               <input type="text" class="form-control" id="exampleInputPassword1" name="meta_description" value="{{$editpage->meta_description}}">
             </div>
 
-            <div id="editor"></div>
-            <input type="hidden" name="content" id="content">
-
-            <div class="mb-3">
+          <div id="editor">{!! $editpage->content !!}</div>
+          <input type="hidden" name="content" id="content">
+          
+          <div class="mb-3">
               <label for="userTypeSelect" class="form-label">Status</label>
               <select class="form-select" id="userTypeSelect" aria-label="Select user type" name="status" value="{{$editpage->status}}">
                 <option value="1" selected>Enable</option>

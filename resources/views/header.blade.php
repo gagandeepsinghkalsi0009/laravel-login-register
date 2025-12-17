@@ -105,6 +105,10 @@
               padding: 20px 10px 19px 23xp;
               margin: 50px 50px 50px 50px;
         }
+b, strong {
+    font-weight: bolder;
+    margin-left: 531px;
+}
 
 
   </style>

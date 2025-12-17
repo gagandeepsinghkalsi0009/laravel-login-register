@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('url_key')->unique();
             $table->string('meta_title');
             $table->text('meta_description');
-            $table->longText('content');
+            $table->longText('content')->nullable;
             $table->integer('status')->default(1);
             $table->timestamps();
         });

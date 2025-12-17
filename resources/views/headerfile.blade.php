@@ -8,7 +8,6 @@
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- DATATABLES -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
@@ -25,12 +24,6 @@
             top: 0;
             left: 0;
             z-index: 1000;
-        }
-
-        /* Push main content down */
-        .content {
-            margin-top: 80px;
-            margin-bottom: 80px;
         }
 
         /* Sticky Footer */
@@ -64,6 +57,44 @@
              margin-left:275px;
             text-decoration:none;
         }
+
+        .main{
+           
+         text-align: center;
+        }
+
+        .inner{  
+            background-color: #F7F6F7;        
+            height: 190px;
+            width: 402px;
+            display: inline-block;
+            text-align: center;
+                border-radius: 17px;
+        }
+
+           .content {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: block;
+            margin-left: 270px;
+        }
+
+          .content p img{
+            display: inline-block;
+             width: 332px;
+            height: 325px;
+            margin-left: 36px;
+            padding: 16px;
+
+          }
+
+          .para{
+             background-color: #F7F6F7;
+             width: auto;
+             overflow: auto;
+             margin-right: 314px;
+                 border-radius: 17px;
+          }
     </style>
 </head>
 
@@ -73,6 +104,12 @@
     <nav class="navbar-custom d-flex align-items-center justify-content-between px-4">
         <h2 class="m-0">@yield('heading','User Successfully Logged In')</h2>
     </nav>
+
+    @hassection('main')
+    @yield('main')
+    @else
+    No Content Found
+    @endif
 
 
     <!-- Main Content -->

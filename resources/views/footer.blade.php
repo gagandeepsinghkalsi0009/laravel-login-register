@@ -19,15 +19,14 @@ const quill = new Quill('#editor', {
   modules: {
     toolbar: [
       ['bold', 'italic', 'underline'],
-      ['image','video',],
+      ['image','video'],
       [{ list: 'ordered' }, { list: 'bullet' }],
-      ['clean'],[{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      [{ header: [1,2,3,4,5,6,false] }],
+      ['clean']
     ]
   }
 });
 
-</script>
-<script>
 document.querySelector('form').addEventListener('submit', function () {
   document.getElementById('content').value = quill.root.innerHTML;
 });
